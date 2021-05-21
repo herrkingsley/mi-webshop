@@ -2,7 +2,7 @@
 #   BASE
 ###############################################################*/
 /********************************
-*   RESTETS
+*   RESETS
 ********************************/
 * {
   margin: 0;
@@ -11,15 +11,184 @@
           box-sizing: border-box;
 }
 
+/********************************
+*   VARIABLES
+********************************/
+/********************************
+*   FONTS
+********************************/
+h1, h2, h3, h4, p, strong, span, a {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
 /*##############################################################
 #   COMPONENTS
 ###############################################################*/
 /********************************
 *   NAVBAR
 ********************************/
+/*************BUTTONS**************/
+.btn {
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  color: #707070;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: background 250ms ease-in-out,  -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out,  -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out,  transform 150ms ease;
+  transition: background 250ms ease-in-out,  transform 150ms ease,  -webkit-transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: transparent;
+}
+
+button:focus {
+  outline: 1px solid transparent;
+  outline-offset: -4px;
+}
+
+button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+/*****************************************/
+.btn--close {
+  display: none;
+}
+
 /*##############################################################
 #   LAYOUT
 ###############################################################*/
 /********************************
 *   NAVBAR
 ********************************/
+.site-header {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.site-nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-nav {
+  display: none;
+  position: absolute;
+  background-color: white;
+}
+
+@media screen and (min-width: 769px) {
+  .site-nav {
+    display: block;
+    position: inherit;
+    background-color: transparent;
+    margin-right: auto;
+  }
+}
+
+.site-nav__btn {
+  margin-right: auto;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  .site-nav__btn {
+    display: none;
+  }
+}
+
+.site-nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 769px) {
+  .site-nav__menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.site-nav__listItem {
+  margin-right: 1rem;
+}
+
+.site-logo {
+  max-width: 50px;
+  max-height: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.shop-nav {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 769px) {
+  .shop-nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    min-width: calc(30% - 50px);
+  }
+}
+
+.shop-nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop-nav__menu--sm {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .shop-nav__menu--sm {
+    display: none;
+  }
+}
+
+.shop-nav__listItem {
+  margin-right: 1rem;
+}
+
+/******* Mobile menu btn ******/

@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>Webshop</title>
 </head>
 <body>
     <header class="site-header">
-        <nav>
-            <button class="site-nav__btn"></button>
+        <nav class="site-nav-container">
+            <button class="site-nav__btn btn" onclick="openSiteMenu()"><i class="fas fa-bars"></i></button>
             <section class="site-nav">
                 <ul class="site-nav__menu">
+                    <button class="btn--close"><i class="fas fa-times"></i></button>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Hem</a></li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Shop</a></li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Blog</a></li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Om oss</a></li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Kontakta oss</a></li>
                 </ul>
-            </section>
-            <img src="" alt="" class="site-logo">
-            <section class="shop-nav">
-                <form class="site-nav__search">
-                    <input type="text" placeholder="Sök bland våra produkter.." name="search">
-                    <button type="submit">Sök</button>
-                </form>
-                <ul class="shop-nav__menu">
+                <ul class="shop-nav__menu--sm">
                     <li class="shop-nav__listItem"><a class="shop-nav__link" href="#">Mitt konto</a></li>
                     <li class="shop-nav__listItem"><a class="shop-nav__link" href="#">Kundvagn</a></li>
+                </ul>
+            </section>
+            <img src="https://via.placeholder.com/50" alt="" class="site-logo">
+            <section class="shop-nav">
+                <ul class="shop-nav__menu">
+                    <li class="shop-nav__listItem"><a class="shop-nav__link" href="#"><i class="fas fa-user"></i></a></li>
+                    <li class="shop-nav__listItem"><a class="shop-nav__link" href="#"><i class="fas fa-shopping-basket"></i></a></li>
                 </ul>
             </section>
 
         </nav>
     </header>
+    <main>
 
     <div id="javatest">hej</div>
     
+    </main>
 
     <!-- https://via.placeholder.com/500 -->
     

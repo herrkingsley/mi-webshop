@@ -12,3 +12,97 @@
 /********************************
 *   NAVBAR
 ********************************/
+
+.site-header {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.site-nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.site-nav {
+    display: none; 
+    position: absolute;
+    background-color: white;
+
+    @media screen and (min-width: 769px) {
+        display: block;
+        position: inherit;
+        background-color: transparent;
+        margin-right: auto;
+        
+    }
+
+    &__btn {
+        margin-right: auto;
+
+        font-size: 1.5rem;
+        @media screen and (min-width: 769px) {
+            display: none;
+            // margin-right: inherit;
+        }
+
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        
+    
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+        }
+    }
+
+    &__listItem {
+        margin-right: 1rem;
+    }
+
+} // end site-nav
+
+.site-logo {
+    max-width: 50px;
+    max-height: 50px;
+    flex: 1;
+}
+
+.shop-nav {
+    margin-left: auto;
+    display: flex;
+    @media screen and (min-width: 769px) {
+        justify-content: flex-end;
+        min-width: calc(30% - 50px;); 
+    }
+    
+
+    &__menu {
+        display: flex;
+        
+        
+
+    &--sm {
+        display: block;
+        
+
+        @media screen and (min-width: 769px) {
+            display: none;
+
+        }  
+    } 
+    }
+
+    &__listItem {
+        margin-right: 1rem;
+    }
+
+}
+
+/******* Mobile menu btn ******/
+

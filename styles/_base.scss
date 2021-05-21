@@ -9,11 +9,37 @@
 
 
 /********************************
-*   RESTETS
+*   RESETS
 ********************************/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+/********************************
+*   VARIABLES
+********************************/
+
+$base-color: #707070;
+
+$main-font: 'Josefin Sans', sans-serif;
+
+/********************************
+*   FONTS
+********************************/
+
+h1, h2, h3, h4, p, strong, span, a {
+    font-family: $main-font;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $base-color;
 }
