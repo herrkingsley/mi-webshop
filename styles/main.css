@@ -17,7 +17,7 @@
 /********************************
 *   FONTS
 ********************************/
-h1, h2, h3, h4, p, strong, span, a, address {
+h1, h2, h3, h4, p, strong, span, a, address, small {
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -411,6 +411,7 @@ button:active {
 main {
   max-width: 1000px;
   margin: 0 auto;
+  background: white;
 }
 
 .main-content {
@@ -427,8 +428,13 @@ main {
 *   NAVBAR
 ********************************/
 .site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   padding: 10px 20px;
+  background: white;
+  z-index: 80;
 }
 
 .site-nav-container {
@@ -590,4 +596,80 @@ main {
   font-size: 1rem;
   line-height: 2rem;
   font-weight: 400;
+}
+
+/***************  FOOTER ********************/
+/*********footer nav***************/
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: -1;
+}
+
+.footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .footer-nav {
+    width: auto;
+  }
+}
+
+.footer-nav__list {
+  margin-right: 20px;
+}
+
+.footer-nav__links {
+  font-size: .75rem;
+}
+
+/*********footer info***************/
+.footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-info__sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer-info__listItem {
+  margin-right: 20px;
+}
+
+.footer-info__links {
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: .75rem;
+  color: #707070;
 }

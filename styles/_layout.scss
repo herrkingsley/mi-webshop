@@ -9,9 +9,13 @@
 #   LAYOUT
 ###############################################################*/
 
+
 main {
     max-width: 1000px;
     margin: 0 auto;
+    background: white;
+
+    
 }
 
 .main-content {
@@ -28,8 +32,13 @@ main {
 ********************************/
 
 .site-header {
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: 10px 20px;
+    background: white;
+    z-index: 80;
+
 }
 
 .site-nav-container {
@@ -165,7 +174,7 @@ main {
     text-align: center;
     margin-bottom: 2rem;
 
-    
+
     &__title {
         font-size: 1.5rem;
         line-height: 3rem;
@@ -180,3 +189,62 @@ main {
     
 }
 
+/***************  FOOTER ********************/
+
+/*********footer nav***************/
+footer {
+    position: sticky;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    bottom: 0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    z-index: -1;
+
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @media screen and (min-width: 769px) {
+        width: auto; 
+    }
+
+    &__list {
+        margin-right: 20px;
+    }
+
+    &__links {
+        font-size: .75rem;
+    }
+}
+/*********footer info***************/
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+
+    &__sm {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__listItem {
+        
+        margin-right: 20px;
+    }
+
+    &__links {
+        cursor: pointer;
+        
+    }
+
+}
+
+.copyright {
+    font-size: .75rem;
+    color: $base-color;
+}
