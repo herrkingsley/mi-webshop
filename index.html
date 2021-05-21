@@ -15,17 +15,20 @@
         <nav class="site-nav-container">
             <button class="site-nav__btn btn" onclick="openSiteMenu()"><i class="fas fa-bars"></i></button>
             <section class="site-nav">
-                <ul class="site-nav__menu">
-                    <button class="btn--close"><i class="fas fa-times"></i></button>
+                <button class="btn-close btn" onclick="openSiteMenu()"><i class="fas fa-times"></i></button>
+                <ul class="site-nav__menu">   
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Hem</a></li>
-                    <li class="site-nav__listItem"><a class="site-nav__link" href="#">Shop</a></li>
+                    <li class="site-nav__listItem exp-B"><a class="site-nav__link" href="#">Shop</a>
+                        <ul class="site-nav__sub-menu exp-B__cont">
+                            <li class="site-nav__listItem exp-B__item"><a class="site-nav__link" href="#">Kategori 1</a></li>
+                            <li class="site-nav__listItem exp-B__item"><a class="site-nav__link" href="#">Kategori 2</a></li>
+                            <li class="site-nav__listItem exp-B__item"><a class="site-nav__link" href="#">Kategori 3</a></li>
+                            <li class="site-nav__listItem exp-B__item"><a class="site-nav__link" href="#">Kategori 4</a></li>
+                        </ul>
+                    </li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Blog</a></li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Om oss</a></li>
                     <li class="site-nav__listItem"><a class="site-nav__link" href="#">Kontakta oss</a></li>
-                </ul>
-                <ul class="shop-nav__menu--sm">
-                    <li class="shop-nav__listItem"><a class="shop-nav__link" href="#">Mitt konto</a></li>
-                    <li class="shop-nav__listItem"><a class="shop-nav__link" href="#">Kundvagn</a></li>
                 </ul>
             </section>
             <img src="https://via.placeholder.com/50" alt="" class="site-logo">
@@ -39,6 +42,19 @@
         </nav>
     </header>
     <main>
+        <div class="hero">
+        <section class="hero-container">
+            <article class="hero-slide">
+                <div class="hero-slide__back"><i class="fas fa-chevron-left"></i></div>
+                <img src="https://source.unsplash.com/random?phone" alt="" class="hero-slide__img">
+                <h1 class="hero-slide__title">New Arrivals</h1>
+                <p class="hero-slide__p">Lorem ipsum</p>
+                <a href="shop.html" class="hero-slide__link">Handla</a>
+                <div class="hero-slide__frw"><i class="fas fa-chevron-right"></i></div>
+                
+            </article>
+        </section>
+        </div>
 
     <div id="javatest">hej</div>
     

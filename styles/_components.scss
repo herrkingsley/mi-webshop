@@ -46,9 +46,116 @@ button:active {
 
 
 /*****************************************/
-.btn {
-    
-    &--close {
-    display: none;
+.btn-close {
+    font-size: 1.5rem;
+
+    @media screen and (min-width: 769px) {
+        display: none;
     }
 }
+
+
+/***************  EXPANDABLE ELEMENTS ********************/
+
+// Extend down on hover
+.exp-B {
+
+    &__cont {
+    visibility: hidden;  
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    overflow: hidden;
+    }
+
+    & > .exp-B__item {
+        opacity: 0;
+        transition: opacity .5s; // transition out
+    }
+
+}
+
+
+
+.exp-B:hover {
+
+
+    & > .exp-B__cont {
+        visibility: visible;
+        max-height: 100vh;
+        transition: max-height  3s ease-out;
+        margin-bottom: 1rem;
+        
+
+        & > .exp-B__item {
+            opacity: 1;
+            transition: opacity 1.5s; //transition in
+        }
+
+    }
+}
+
+/***************  HERO SLIDESHOW ********************/
+
+
+.hero-slide {
+    position: relative;
+
+    &__img {
+        max-height: 310px;
+        width: 100%;
+        object-fit: cover;
+
+        @media screen and (min-width: 769px) {
+            max-height: 500px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 20%;
+        margin-left: 20%;
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+    &__p {
+        position: absolute;
+        top: calc(20% + 1.5rem);
+        margin-left: 20%;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__link {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-left: 20%;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 12px 20px 10px;
+        text-transform: uppercase;
+
+        border: 1px solid rgb(37, 37, 37);
+
+    }
+
+    &__back,
+    &__frw {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__back {
+        left: 20px;
+    }
+    &__frw {
+        right: 20px;
+    }
+
+
+}
+
+
+

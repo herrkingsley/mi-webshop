@@ -69,13 +69,115 @@ button:active {
 }
 
 /*****************************************/
-.btn--close {
-  display: none;
+.btn-close {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  .btn-close {
+    display: none;
+  }
+}
+
+/***************  EXPANDABLE ELEMENTS ********************/
+.exp-B__cont {
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transition: max-height .5s ease-out;
+  transition: max-height .5s ease-out;
+  overflow: hidden;
+}
+
+.exp-B > .exp-B__item {
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.exp-B:hover > .exp-B__cont {
+  visibility: visible;
+  max-height: 100vh;
+  -webkit-transition: max-height  3s ease-out;
+  transition: max-height  3s ease-out;
+  margin-bottom: 1rem;
+}
+
+.exp-B:hover > .exp-B__cont > .exp-B__item {
+  opacity: 1;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+/***************  HERO SLIDESHOW ********************/
+.hero-slide {
+  position: relative;
+}
+
+.hero-slide__img {
+  max-height: 310px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 769px) {
+  .hero-slide__img {
+    max-height: 500px;
+  }
+}
+
+.hero-slide__title {
+  position: absolute;
+  top: 20%;
+  margin-left: 20%;
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.hero-slide__p {
+  position: absolute;
+  top: calc(20% + 1.5rem);
+  margin-left: 20%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hero-slide__link {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 20%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 20px 10px;
+  text-transform: uppercase;
+  border: 1px solid #252525;
+}
+
+.hero-slide__back, .hero-slide__frw {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hero-slide__back {
+  left: 20px;
+}
+
+.hero-slide__frw {
+  right: 20px;
 }
 
 /*##############################################################
 #   LAYOUT
 ###############################################################*/
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /********************************
 *   NAVBAR
 ********************************/
@@ -99,17 +201,44 @@ button:active {
 }
 
 .site-nav {
-  display: none;
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
   position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100vh;
+  padding: 20px 0px;
   background-color: white;
 }
 
 @media screen and (min-width: 769px) {
   .site-nav {
-    display: block;
+    visibility: visible;
+    width: auto;
+    height: 100%;
     position: inherit;
     background-color: transparent;
     margin-right: auto;
+    overflow: visible;
+  }
+}
+
+.site-nav.toggleMenu {
+  padding: 20px;
+  visibility: visible;
+  width: 70%;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  z-index: 90;
+}
+
+@media screen and (min-width: 769px) {
+  .site-nav.toggleMenu {
+    width: auto;
+    height: 100%;
+    padding: 0;
   }
 }
 
@@ -143,8 +272,28 @@ button:active {
   }
 }
 
+.site-nav__sub-menu {
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  .site-nav__sub-menu {
+    position: absolute;
+    margin-left: .5rem;
+    padding: 10px 10px 20px;
+    background: white;
+    z-index: 100;
+  }
+}
+
 .site-nav__listItem {
+  position: relative;
   margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.site-nav__link {
+  white-space: nowrap;
 }
 
 .site-logo {
@@ -177,18 +326,8 @@ button:active {
   display: flex;
 }
 
-.shop-nav__menu--sm {
-  display: block;
-}
-
-@media screen and (min-width: 769px) {
-  .shop-nav__menu--sm {
-    display: none;
-  }
-}
-
 .shop-nav__listItem {
   margin-right: 1rem;
 }
 
-/******* Mobile menu btn ******/
+/***************  HERO SLIDESHOW ********************/

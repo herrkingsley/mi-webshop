@@ -9,6 +9,12 @@
 #   LAYOUT
 ###############################################################*/
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
 /********************************
 *   NAVBAR
 ********************************/
@@ -28,21 +34,48 @@
 }
 
 .site-nav {
-    display: none; 
+    display: block; 
+    visibility: hidden;
+    overflow: hidden;
     position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100vh;
+    padding: 20px 0px;
     background-color: white;
+    
+
+    // border: solid 1px gray;
 
     @media screen and (min-width: 769px) {
-        display: block;
+        visibility: visible;
+        width: auto;
+        height: 100%;
+        // display: block;
         position: inherit;
         background-color: transparent;
         margin-right: auto;
+        overflow:visible;
         
+    }
+
+    &.toggleMenu {
+        padding: 20px;
+        visibility: visible;
+        width: 70%;
+        transition: all 500ms ease-out;
+        z-index: 90;
+
+        @media screen and (min-width: 769px) { 
+            width: auto;
+            height: 100%;
+            padding: 0;
+        }
     }
 
     &__btn {
         margin-right: auto;
-
         font-size: 1.5rem;
         @media screen and (min-width: 769px) {
             display: none;
@@ -55,15 +88,40 @@
         display: flex;
         flex-direction: column;
         
+        
     
         @media screen and (min-width: 769px) {
             flex-direction: row;
         }
     }
 
-    &__listItem {
-        margin-right: 1rem;
+    &__sub-menu {
+
+        margin-left: 1.5rem;
+
+        @media screen and (min-width: 769px) {
+            position: absolute;
+            // overflow: visible;
+            margin-left: .5rem;
+            padding: 10px 10px 20px;
+            background: white;
+            z-index: 100;
+        }
+
     }
+
+    &__listItem {
+        position: relative;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+
+    &__link {
+        white-space: nowrap;
+    }
+    
+    
 
 } // end site-nav
 
@@ -78,24 +136,13 @@
     display: flex;
     @media screen and (min-width: 769px) {
         justify-content: flex-end;
-        min-width: calc(30% - 50px;); 
+        min-width: calc(30% - 50px); 
     }
     
 
     &__menu {
         display: flex;
         
-        
-
-    &--sm {
-        display: block;
-        
-
-        @media screen and (min-width: 769px) {
-            display: none;
-
-        }  
-    } 
     }
 
     &__listItem {
@@ -104,5 +151,5 @@
 
 }
 
-/******* Mobile menu btn ******/
+/***************  HERO SLIDESHOW ********************/
 
