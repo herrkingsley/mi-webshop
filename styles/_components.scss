@@ -176,4 +176,61 @@ button:active {
 
 
 /***************  Kategori kort ********************/
+.cat-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 40px;
 
+}
+
+.cat-card {
+    border: 1px red solid;
+    width: 45%;  
+    height: auto; 
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 769px) {
+        max-width: 30%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 23%;
+    }
+
+
+    &__img {
+        min-height: 45vw;
+        max-width: 100%;
+        object-fit: cover;
+
+        @media screen and (min-width: 769px) {
+            min-height: 30vw;
+        }
+    
+        @media screen and (min-width: 1024px) {
+            min-height: 23vw;
+        }
+        
+    }
+
+    &__amount {
+       font-size: 1rem;
+       font-weight: 200;
+       line-height: 1.5rem; 
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2rem; 
+        @media screen and (min-width: 426px) {
+            font-size: 1.563rem;
+            line-height: 2.5rem
+        }
+    }
+
+    
+
+}
