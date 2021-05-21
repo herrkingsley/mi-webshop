@@ -236,28 +236,23 @@ button:active {
 }
 
 .card__imgframe {
-  max-height: 45vw;
-  max-width: auto;
   overflow: hidden;
 }
 
-@media screen and (min-width: 769px) {
-  .card__imgframe {
-    max-height: 30vw;
-  }
+.card .product {
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-@media screen and (min-width: 1000px) {
-  .card__imgframe {
-    max-height: calc((1000px / 4) - 20px);
+@media screen and (min-width: 425px) {
+  .card .product {
+    height: 150px;
   }
 }
 
 .card__img {
-  max-height: 45vw;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   -webkit-transition: -webkit-transform .5s ease-in;
   transition: -webkit-transform .5s ease-in;
   transition: transform .5s ease-in;

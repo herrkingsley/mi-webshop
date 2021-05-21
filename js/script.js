@@ -35,24 +35,43 @@ function showSlides() {
   }
 
 
-  //--------------- Render NEW products  ------------------
+function renderCards(array) {
 
-
-
-function renderNewProducts() {
-let renderProducts = [];
-products.landsvag.forEach(element => {
+  let renderProducts = [];
+array.forEach(element => {
     renderProducts += `
     <article class="products card">
         <a href="#">
-        <div class="card__imgframe"><img src="${element.img}" alt="" class="card__img"></div>
+        <div class="card__imgframe"><img src="${element.img}" alt="" class="card__img product"></div>
         <h1 class="card__desc">${element.name}</h1>
         <h2 class="card__price">${element.price}</h2>
         </a>
-    </article>
-    `;
-});
-document.getElementById('javatest').innerHTML = `<p>${renderProducts}</p>`;
+     </article>
+     `; 
+    });
+    return renderProducts;
 }
 
+
+  //--------------- Render NEW products  ------------------
+
+  
+
+function renderNewProducts() {
+
+  // Chooses the first item in every category
+  const newProducts = [products.landsvag[0], products.vintage[0],products.downhill[0],products.childbike[0]];
+
+  document.getElementById('products-container').innerHTML = renderCards(newProducts)
+
+
+}
+
+
+
 renderNewProducts()
+
+
+
+
+// }

@@ -200,25 +200,26 @@ button:active {
 
     // Container som håller bilden, hjälper till med zoom funktionen
     &__imgframe {
-        max-height: 45vw;
-        max-width: auto;
+        // border: solid 1px red;
         overflow: hidden;
-
-        @media screen and (min-width: 769px) {
-            max-height: 30vw;
-        }
     
-        @media screen and (min-width: 1000px) {
-            max-height: calc((1000px / 4) - 20px );
+    }
+
+    & .product {
+        height: 100px;
+        object-fit: contain;
+
+        @media screen and (min-width: 425px) {
+            height: 150px;
         }
+
     }
 
 
     &__img {
-
-        max-height: 45vw;
+        
         width: 100%;
-        object-fit: cover;
+        
         
         transition: transform .5s ease-in;   
     }
