@@ -202,7 +202,7 @@ button:active {
 }
 
 /***************  Kategori kort ********************/
-.cat-cards {
+.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,43 +217,43 @@ button:active {
   padding-bottom: 40px;
 }
 
-.cat-card {
+.card {
   width: 45%;
   height: auto;
   margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 769px) {
-  .cat-card {
+  .card {
     max-width: 30%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .cat-card {
+  .card {
     max-width: 23%;
   }
 }
 
-.cat-card__imgframe {
+.card__imgframe {
   max-height: 45vw;
   max-width: auto;
   overflow: hidden;
 }
 
 @media screen and (min-width: 769px) {
-  .cat-card__imgframe {
+  .card__imgframe {
     max-height: 30vw;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .cat-card__imgframe {
+  .card__imgframe {
     max-height: calc((1000px / 4) - 20px);
   }
 }
 
-.cat-card__img {
+.card__img {
   max-height: 45vw;
   width: 100%;
   -o-object-fit: cover;
@@ -264,7 +264,7 @@ button:active {
   transition: transform .5s ease-in, -webkit-transform .5s ease-in;
 }
 
-.cat-card__img:hover {
+.card__img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: -webkit-transform .7s ease-in-out;
@@ -273,25 +273,27 @@ button:active {
   transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
 }
 
-.cat-card__amount {
+.card__amount, .card__desc {
   font-size: 1rem;
   font-weight: 200;
-  line-height: 1.5rem;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 
-.cat-card__title {
+.card__title, .card__price {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 2rem;
 }
 
 @media screen and (min-width: 426px) {
-  .cat-card__title {
+  .card__title, .card__price {
     font-size: 1.563rem;
     line-height: 2.5rem;
   }
 }
 
+/***************  Produkt kort ********************/
 /*##############################################################
 #   LAYOUT
 ###############################################################*/
@@ -462,4 +464,19 @@ main {
   margin-right: 1rem;
 }
 
-/***************  HERO SLIDESHOW ********************/
+/***************  PRODUKT WRAPPER ********************/
+.products-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.products-head__title {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.products-head__desc {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
+}

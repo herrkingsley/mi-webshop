@@ -6,18 +6,6 @@ function openSiteMenu() {
 
 }
 
-
-//--------------- end Mobil meny ------------------
-
-
-
-let renderProducts = [];
-let loopproducts = products.produkter.forEach(element => {
-    renderProducts += `${element.name} <br> ${element.price} <br><br>`;;
-});
-document.getElementById('javatest').innerHTML = `<p>${renderProducts}</p>`;
-
-
 //--------------- Hero Slideshow ------------------
 
 let slideIndex = 1;
@@ -45,3 +33,26 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block"; // Shows the current slide
     setTimeout(showSlides, 7000); // Change slide every X seconds
   }
+
+
+  //--------------- Render NEW products  ------------------
+
+
+
+function renderNewProducts() {
+let renderProducts = [];
+products.landsvag.forEach(element => {
+    renderProducts += `
+    <article class="products card">
+        <a href="#">
+        <div class="card__imgframe"><img src="${element.img}" alt="" class="card__img"></div>
+        <h1 class="card__desc">${element.name}</h1>
+        <h2 class="card__price">${element.price}</h2>
+        </a>
+    </article>
+    `;
+});
+document.getElementById('javatest').innerHTML = `<p>${renderProducts}</p>`;
+}
+
+renderNewProducts()

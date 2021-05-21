@@ -176,7 +176,7 @@ button:active {
 
 
 /***************  Kategori kort ********************/
-.cat-cards {
+.cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -185,7 +185,7 @@ button:active {
 
 }
 
-.cat-card {
+.card {
     width: 45%;  
     height: auto; 
     margin-bottom: 2rem;
@@ -231,13 +231,16 @@ button:active {
         transition: transform .7s ease-in-out;
     }
 
-    &__amount {
+    &__amount,
+    &__desc {
        font-size: 1rem;
        font-weight: 200;
-       line-height: 1.5rem; 
+       margin-bottom: .5rem;
+       margin-top: .5rem;
     }
 
-    &__title {
+    &__title, 
+    &__price {
         font-size: 1.2rem;
         font-weight: 400;
         line-height: 2rem; 
@@ -246,6 +249,14 @@ button:active {
             line-height: 2.5rem
         }
     }
+}
 
+/***************  Produkt kort ********************/
+
+.product-container {
+
+}
+
+.prod-card {
 
 }
