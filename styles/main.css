@@ -17,7 +17,7 @@
 /********************************
 *   FONTS
 ********************************/
-h1, h2, h3, h4, p, strong, span, a {
+h1, h2, h3, h4, p, strong, span, a, address {
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -327,6 +327,7 @@ button:active {
 .news-letter .form__input {
   text-align: left;
   border: 2px solid #707070;
+  border-radius: 5px 0 0 5px;
   padding: 10px;
   width: 70%;
 }
@@ -340,6 +341,7 @@ button:active {
 .news-letter .form__send {
   padding: 10px;
   border: 2px solid #707070;
+  border-radius: 0 5px 5px 0;
   background-color: #707070;
   color: white;
   margin-left: -5px;
@@ -350,6 +352,57 @@ button:active {
 .news-letter .form__send:hover {
   background-color: white;
   color: #707070;
+}
+
+/***************  call to action card  ********************/
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 225px;
+  background: url("../images/contact-cta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 426px) {
+  .cta {
+    height: 400px;
+  }
+}
+
+.cta address {
+  font-weight: 600;
+}
+
+.cta__btn {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.cta__btn:hover {
+  background-color: #707070;
+  border: 2px solid #707070;
+  color: #252525;
 }
 
 /*##############################################################

@@ -292,6 +292,7 @@ button:active {
         &__input {
             text-align: left;
             border: 2px solid $base-color;
+            border-radius: 5px 0 0 5px;
             padding: 10px;
             width: 70%;
 
@@ -303,6 +304,7 @@ button:active {
         &__send {
             padding: 10px;
             border: 2px solid $base-color;
+            border-radius:0 5px 5px 0;
             background-color: $base-color;
             color: white;
             margin-left: -5px;
@@ -316,4 +318,48 @@ button:active {
 
         
     }
+}
+
+/***************  call to action card  ********************/
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    background: url('../images/contact-cta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+
+    margin-bottom: 50px;
+
+
+    @media screen and (min-width: 426px) {
+        height: 400px;
+    }
+
+    & address {
+        font-weight: 600;
+    } 
+
+    &__btn {
+        display: inline-block;
+        text-align: center;
+        width: 200px;
+        margin-top: 2rem;
+        padding: 10px 20px;
+        border: 2px solid white;
+        color: white;
+        transition: all .5s ease-in-out;
+    }
+
+    &__btn:hover {
+        background-color: $base-color;
+        border: 2px solid $base-color;
+        color:rgb(37, 37, 37);
+        
+    }
+
+
 }
