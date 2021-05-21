@@ -218,7 +218,6 @@ button:active {
 }
 
 .cat-card {
-  border: 1px red solid;
   width: 45%;
   height: auto;
   margin-bottom: 2rem;
@@ -236,11 +235,22 @@ button:active {
   }
 }
 
+.cat-card__imgframe {
+  min-height: auto;
+  max-width: auto;
+  overflow: hidden;
+}
+
 .cat-card__img {
   min-height: 45vw;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform .5s ease-in;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
 }
 
 @media screen and (min-width: 769px) {
@@ -249,10 +259,19 @@ button:active {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
   .cat-card__img {
-    min-height: 23vw;
+    min-height: calc((1000px / 4) - 20px);
   }
+}
+
+.cat-card__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+  transition: -webkit-transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+  transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
 }
 
 .cat-card__amount {

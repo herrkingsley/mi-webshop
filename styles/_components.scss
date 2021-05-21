@@ -186,7 +186,6 @@ button:active {
 }
 
 .cat-card {
-    border: 1px red solid;
     width: 45%;  
     height: auto; 
     margin-bottom: 2rem;
@@ -199,20 +198,37 @@ button:active {
         max-width: 23%;
     }
 
+    &__imgframe {
+        min-height: auto;
+        max-width: auto;
+        overflow: hidden;
+    }
+
 
     &__img {
+
         min-height: 45vw;
         max-width: 100%;
         object-fit: cover;
+        overflow: hidden;
+        transition: transform .5s ease-in;
 
         @media screen and (min-width: 769px) {
             min-height: 30vw;
         }
     
-        @media screen and (min-width: 1024px) {
-            min-height: 23vw;
+        @media screen and (min-width: 1000px) {
+            min-height: calc((1000px / 4) - 20px );
         }
         
+    }
+
+    
+
+    // Zommar in bild vid hover
+    &__img:hover {
+        transform: scale(1.1);
+        transition: transform .7s ease-in-out;
     }
 
     &__amount {
