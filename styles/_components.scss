@@ -15,8 +15,9 @@
 
 
 
-/*************BUTTONS**************/
-.btn {  
+/*************BUTTONS AND INPUTS **************/
+.btn,
+input {  
     border: none;
     margin: 0;
     text-decoration: none;
@@ -31,11 +32,14 @@
 }
 
 button:hover,
-button:focus {
+button:focus,
+input:hover,
+input:focus {
     background: transparent;
 }
 
-button:focus {
+button:focus,
+input:focus {
     outline: 1px solid transparent;
     outline-offset: -4px;
 }
@@ -252,12 +256,64 @@ button:active {
     }
 }
 
-/***************  Produkt kort ********************/
+/***************  News letter  ********************/
 
-.product-container {
 
-}
+.news-letter {
+    padding-top: 50px;
+    padding-bottom: 100px;
 
-.prod-card {
+    &__title {
+        font-size: 1rem;
+        line-height: 2rem;
 
+        @media screen and (min-width: 426px) {
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+
+    }
+
+    &__desc {
+        font-size: .75rem;
+        line-height: 1rem; 
+        
+        font-weight: 400;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 426px) {
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+    }
+
+    & .form {
+        
+        &__input {
+            text-align: left;
+            border: 2px solid $base-color;
+            padding: 10px;
+            width: 70%;
+
+            @media screen and (min-width: 426px) {
+                width: 50%; 
+            }
+        }
+
+        &__send {
+            padding: 10px;
+            border: 2px solid $base-color;
+            background-color: $base-color;
+            color: white;
+            margin-left: -5px;
+            transition: background-color .5s ease-in-out, color .5s ease-in-out;
+        }
+
+        &__send:hover {
+            background-color: white;
+            color: $base-color;
+        }
+
+        
+    }
 }
