@@ -109,6 +109,10 @@ button:active {
 }
 
 /***************  HERO SLIDESHOW ********************/
+.hero-container {
+  position: relative;
+}
+
 .hero-slide {
   position: relative;
 }
@@ -155,18 +159,20 @@ button:active {
   border: 1px solid #252525;
 }
 
-.hero-slide__back, .hero-slide__frw {
+.hero-back,
+.hero-frw {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
 }
 
-.hero-slide__back {
+.hero-back {
   left: 20px;
 }
 
-.hero-slide__frw {
+.hero-frw {
   right: 20px;
 }
 

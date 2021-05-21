@@ -96,6 +96,10 @@ button:active {
 
 /***************  HERO SLIDESHOW ********************/
 
+.hero-container {
+    position: relative;
+}
+
 
 .hero-slide {
     position: relative;
@@ -140,22 +144,23 @@ button:active {
 
     }
 
-    &__back,
-    &__frw {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    &__back {
-        left: 20px;
-    }
-    &__frw {
-        right: 20px;
-    }
-
-
 }
 
+
+// Navigerings pilar för hero
+.hero-back,
+.hero-frw {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.hero-back {
+    left: 20px;
+}
+.hero-frw {
+    right: 20px;
+}
 
 
