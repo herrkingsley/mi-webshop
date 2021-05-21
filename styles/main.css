@@ -236,33 +236,32 @@ button:active {
 }
 
 .cat-card__imgframe {
-  min-height: auto;
+  max-height: 45vw;
   max-width: auto;
   overflow: hidden;
 }
 
-.cat-card__img {
-  min-height: 45vw;
-  max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  -webkit-transition: -webkit-transform .5s ease-in;
-  transition: -webkit-transform .5s ease-in;
-  transition: transform .5s ease-in;
-  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
-}
-
 @media screen and (min-width: 769px) {
-  .cat-card__img {
-    min-height: 30vw;
+  .cat-card__imgframe {
+    max-height: 30vw;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .cat-card__img {
-    min-height: calc((1000px / 4) - 20px);
+  .cat-card__imgframe {
+    max-height: calc((1000px / 4) - 20px);
   }
+}
+
+.cat-card__img {
+  max-height: 45vw;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform .5s ease-in;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
 }
 
 .cat-card__img:hover {
