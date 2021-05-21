@@ -159,7 +159,6 @@ button:active {
   border: 1px solid #252525;
 }
 
-/* Fading animation */
 .fade-slide {
   -webkit-animation-name: fade;
           animation-name: fade;
@@ -202,6 +201,7 @@ button:active {
   right: 20px;
 }
 
+/***************  Kategori kort ********************/
 /*##############################################################
 #   LAYOUT
 ###############################################################*/
