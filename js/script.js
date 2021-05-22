@@ -7,9 +7,10 @@ function openSiteMenu() {
 }
 
 //--------------- Hero Slideshow ------------------
-
 let slideIndex = 1;
-showSlides(slideIndex);
+if(document.querySelectorAll('.hero').length > 0) {
+showSlides();
+}
 
 // // Next/previous controls
 // function plusSlides(n) {
@@ -22,6 +23,7 @@ showSlides(slideIndex);
 // }
 
 function showSlides() {
+    
     let i;
     let slides = document.getElementsByClassName("hero-slide");
     for (i = 0; i < slides.length; i++) {
@@ -31,14 +33,14 @@ function showSlides() {
     slideIndex++; 
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block"; // Shows the current slide
-    setTimeout(showSlides, 7000); // Change slide every X seconds
+    setTimeout(showSlides, 2000); // Change slide every X seconds
   }
 
 
 function renderCards(array) {
 
   let renderProducts = [];
-array.forEach(element => {
+  array.forEach(element => {
     renderProducts += `
     <article class="products card">
         <a href="#">
@@ -67,11 +69,22 @@ function renderNewProducts() {
 
 }
 
+if(document.querySelectorAll('#products-container').length > 0) {
+
+  renderNewProducts();
+  }
 
 
-renderNewProducts()
+  //--------------- Filtercards  ------------------
 
+  
+  const cardCategories = document.querySelectorAll('.filter-card__title');
 
+   cardCategories.forEach(element => {
+     element.addEventListener('click', () => {
+       console.log('click')
+       element.firstElementChild.firstElementChild.classList.toggle("rotateArrow");
+       element.nextElementSibling.classList.toggle("tExpOut");
+     });
+   });
 
-
-// }

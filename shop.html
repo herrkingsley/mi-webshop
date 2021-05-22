@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="js/ajax.js"></script>
+    <title>Webshop</title>
 </head>
 <body>
-
-    <h1>Ajax test</h1>
-    <div id="insertAjax"></div>
     
-    <script src="/js/ajax.js"></script>
+    <header id="getHeader" class="site-header">
+        <script>includeHTML("getHeader", "header")</script>  <!-- Import header.html through AJAX -->
+    </header>
+
+    
+    <main>
+        <div class="main-content">
+            <div class="shop-wrapper">
+                <aside class="filter-card">
+                    <section class="filter-card__categories">
+                        <h3 class="filter-card__title tExp-btn">Kategorier<span><i class="fas fa-chevron-up arrow rotateArrow"></i></span></h3>
+                        <ul class="filter-cart__list tExp tExpOut">
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Vintage</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Landsväg</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Downhill</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Barncyklar</a></li>
+                        </ul>
+                    </section>
+                    <section class="filter-card__categories">
+                        <h3 class="filter-card__title">Målgrupp<span><i class="fas fa-chevron-up arrow"></i></span></h3>
+                        <ul class="filter-cart__list tExp">
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Barn</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Dam</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Herr</a></li>
+                        </ul>
+                    </section>
+                    <section class="filter-card__categories">
+                        <h3 class="filter-card__title">Märken<span><i class="fas fa-chevron-up arrow"></i></span></h3>
+                        <ul class="filter-cart__list tExp">
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Tarmac</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Aethos</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Roubaix</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">BIZ</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">PRIMA</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Stumpjumper</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Fuse</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Turbo</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">XXlite</a></li>
+                            <li class="filter-card__listitem"><a href="#" class="filter-card__link">Superlite</a></li>
+                        </ul>
+                    </section>
+                </aside> <!-- end filter-card -->
+                <div class="shop-content">
+                    <aside class="filter-btn-container">
+                        <select name="select" id="select" class="select select__light">
+                            <option value="bestseller">Bästsäljare</option>
+                            <option value="news">Nyheter</option>
+                            <option value="pris-asc">Pris (Stigande)</option>
+                            <option value="pris-desc">Pris (Fallande)</option>
+                        </select>
+                    </aside> <!-- end filter-container -->
+                    <section id="products-container" class="cards">
+                        <!-- Product are fetched from products.js and renderd trhough script.js -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="getFooter">
+        <script>includeHTML("getFooter", "footer")</script>  <!-- Import footer.html through AJAX -->
+    </footer>
+    
+    
+    <script src="/js/products.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

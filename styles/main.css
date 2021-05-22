@@ -30,6 +30,10 @@ a {
   color: #707070;
 }
 
+a:hover {
+  opacity: .7;
+}
+
 /*##############################################################
 #   COMPONENTS
 ###############################################################*/
@@ -38,7 +42,8 @@ a {
 ********************************/
 /*************BUTTONS AND INPUTS **************/
 .btn,
-input {
+input,
+select {
   border: none;
   margin: 0;
   text-decoration: none;
@@ -54,6 +59,47 @@ input {
   -moz-appearance: none;
 }
 
+.btn__dark,
+.select__dark {
+  padding: 10px 20px;
+  border: 2px solid #707070;
+  border-radius: 2px;
+  background-color: #707070;
+  color: white;
+}
+
+.btn__dark:hover,
+.select__dark:hover {
+  background: white;
+  border-color: #707070;
+  color: #707070;
+}
+
+.btn__dark:focus,
+.select__dark:focus {
+  color: #707070;
+}
+
+.btn__light,
+.select__light {
+  padding: 5px 10px;
+  border: 2px solid #707070;
+  border-radius: 2px;
+  background-color: white;
+  color: #707070;
+}
+
+.btn__light:hover,
+.select__light:hover {
+  background: #707070;
+  border-color: #707070;
+  color: white;
+}
+
+.select__light {
+  font-size: .75rem;
+}
+
 button:hover,
 button:focus,
 input:hover,
@@ -61,6 +107,7 @@ input:focus {
   background: transparent;
 }
 
+select:focus,
 button:focus,
 input:focus {
   outline: 1px solid transparent;
@@ -83,6 +130,7 @@ button:active {
   }
 }
 
+/******************** Graphic arrows ***************/
 /***************  EXPANDABLE ELEMENTS ********************/
 .exp-B__cont {
   visibility: hidden;
@@ -110,6 +158,44 @@ button:active {
   opacity: 1;
   -webkit-transition: opacity 1.5s;
   transition: opacity 1.5s;
+}
+
+/***************  toggle expand  ********************/
+.arrow {
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  top: -2;
+  right: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.rotateArrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.tExp {
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transition: max-height .5s ease-out;
+  transition: max-height .5s ease-out;
+  overflow: hidden;
+}
+
+.tExpOut {
+  visibility: visible;
+  max-height: 100vh;
+  -webkit-transition: max-height  3s ease-out;
+  transition: max-height  3s ease-out;
+  margin-bottom: 1rem;
 }
 
 /***************  HERO SLIDESHOW ********************/
@@ -405,12 +491,119 @@ button:active {
   color: #252525;
 }
 
+/***************  SHOP  ********************/
+.shop-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .shop-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.filter-btn-container {
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+/***************  filter card  ********************/
+.filter-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+@media screen and (min-width: 425px) {
+  .filter-card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-height: 70vh;
+    width: 200px;
+  }
+}
+
+.filter-card__categories {
+  margin-bottom: 1rem;
+  width: 30%;
+}
+
+@media screen and (min-width: 425px) {
+  .filter-card__categories {
+    width: auto;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-card__categories {
+    width: 100%;
+  }
+}
+
+.filter-card__title {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  padding-bottom: 5px;
+  font-size: .75rem;
+}
+
+.filter-card__title .arrow {
+  font-size: .75rem;
+  right: auto;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-card__title .arrow {
+    right: 0;
+    margin-left: 0px;
+  }
+}
+
+.filter-card__link {
+  line-height: 1.5rem;
+  font-size: .75rem;
+}
+
+.filter-card__link:hover {
+  text-decoration: underline;
+}
+
 /*##############################################################
 #   LAYOUT
 ###############################################################*/
 main {
   max-width: 1000px;
-  margin: 0 auto 350px;
+  margin: 20px auto 350px;
   background: white;
 }
 
@@ -608,6 +801,11 @@ main {
   font-size: 1rem;
   line-height: 2rem;
   font-weight: 400;
+}
+
+/***************  Shop ********************/
+.shop-wrapper {
+  position: relative;
 }
 
 /***************  FOOTER ********************/

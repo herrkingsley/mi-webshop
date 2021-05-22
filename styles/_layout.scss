@@ -12,7 +12,7 @@
 
 main {
     max-width: 1000px;
-    margin: 0 auto 350px;
+    margin: 20px auto 350px;
     background: white;
 
     @media screen and (max-width: 319px) {
@@ -195,6 +195,10 @@ main {
     }
 
     
+}
+/***************  Shop ********************/
+.shop-wrapper {
+    position: relative;
 }
 
 /***************  FOOTER ********************/
