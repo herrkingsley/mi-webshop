@@ -6,7 +6,7 @@ function includeHTML(ID, file) {
         this.responseText;
       }
     };
-    xhttp.open("GET", `../${file}.html`, true);
+    xhttp.open("GET", `../includes/${file}.html`, true);
     xhttp.send();
   }
 
