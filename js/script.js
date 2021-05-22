@@ -43,7 +43,7 @@ function renderCards(array) {
   array.forEach(element => {
     renderProducts += `
     <article class="products card">
-        <a href="#">
+        <a href="./product.html" onclick="localStorage.setItem('product', '${element.category},${element.name}')">
         <div class="card__imgframe"><img src="${element.img}" alt="" class="card__img product"></div>
         <h1 class="card__desc">${element.name}</h1>
         <h2 class="card__price">${element.price}</h2>
@@ -55,8 +55,29 @@ function renderCards(array) {
 }
 
 
-  //--------------- Render NEW products  ------------------
+  //--------------- Dynamic product page  ------------------
 
+
+  function renderProductPage() {
+    let renderProducts = [];
+    let product = localStorage.getItem("product").split(",");
+    products[product[0]].forEach(element => {
+      if(element.name === product[1]) {
+        renderProducts += `
+    <article class="products card">  
+        <div class="card__imgframe"><img src="${element.img}" alt="" class="card__img product"></div>
+        <h1 class="card__desc">${element.name}</h1>
+        <h2 class="card__price">${element.price}</h2>
+     </article>
+     `; 
+    }});
+    
+
+
+    document.getElementById("product").innerHTML = renderProducts;
+  }
+
+   //--------------- Render NEW products  ------------------
   
 
 function renderNewProducts() {

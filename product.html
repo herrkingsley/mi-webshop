@@ -1,2 +1,39 @@
-<h1>This is my xhttp.responseXML produkt</h1>
-<p>It is amazing</p>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="js/ajax.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/script.js"></script>
+    <title>Webshop</title>
+</head>
+<body>
+    
+    <header id="getHeader" class="site-header">
+        <script>includeHTML("getHeader", "header")</script>  <!-- Import header.html through AJAX -->
+    </header>
+
+    
+    <main>
+        <div class="main-content">
+
+        <div class="" id="product">Här ska det vara en produkt</div>
+        <script>renderProductPage()</script>
+
+    </div>
+</main>
+<footer id="getFooter">
+    <script>includeHTML("getFooter", "footer")</script>  <!-- Import footer.html through AJAX -->
+</footer>
+
+
+
+
+</body>
+</html>
