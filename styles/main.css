@@ -410,8 +410,20 @@ button:active {
 ###############################################################*/
 main {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 350px;
   background: white;
+}
+
+@media screen and (max-width: 319px) {
+  main {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  main {
+    margin-bottom: 250px;
+  }
 }
 
 .main-content {
@@ -601,8 +613,7 @@ main {
 /***************  FOOTER ********************/
 /*********footer nav***************/
 footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   padding: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -618,6 +629,12 @@ footer {
   z-index: -1;
 }
 
+@media screen and (max-width: 319px) {
+  footer {
+    position: initial;
+  }
+}
+
 .footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,18 +642,27 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 2rem;
   width: 100%;
 }
 
 @media screen and (min-width: 769px) {
   .footer-nav {
-    width: auto;
+    width: 70%;
   }
 }
 
 .footer-nav__list {
-  margin-right: 20px;
+  margin: 10px;
+  min-width: 40%;
+}
+
+@media screen and (min-width: 425px) {
+  .footer-nav__list {
+    min-width: auto;
+  }
 }
 
 .footer-nav__links {
@@ -645,12 +671,29 @@ footer {
 
 /*********footer info***************/
 .footer-info {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 425px) {
+  .footer-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .footer-info__sm {
@@ -659,6 +702,10 @@ footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
 }
 
 .footer-info__listItem {
@@ -670,6 +717,6 @@ footer {
 }
 
 .copyright {
-  font-size: .75rem;
+  font-size: .625rem;
   color: #707070;
 }

@@ -12,8 +12,16 @@
 
 main {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 350px;
     background: white;
+
+    @media screen and (max-width: 319px) {
+        margin-bottom: 0; 
+    }
+
+    @media screen and (min-width: 426px) {
+        margin-bottom: 250px;
+    }
 
     
 }
@@ -193,7 +201,7 @@ main {
 
 /*********footer nav***************/
 footer {
-    position: sticky;
+    position: fixed;
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -203,19 +211,29 @@ footer {
     justify-content: space-between;
     z-index: -1;
 
+    @media screen and (max-width: 319px) {
+        position:initial; 
+    }
+
 }
 .footer-nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
     width: 100%;
 
     @media screen and (min-width: 769px) {
-        width: auto; 
+        width: 70%; 
     }
 
     &__list {
-        margin-right: 20px;
+        margin: 10px;
+        min-width: 40%;
+
+        @media screen and (min-width: 425px) {
+            min-width: auto; 
+        }
     }
 
     &__links {
@@ -224,16 +242,24 @@ footer {
 }
 /*********footer info***************/
 .footer-info {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 425px) {
+        flex-direction: row; 
+    }
 
     &__sm {
         display: flex;
         justify-content: space-around;
+        align-items: center;
+        padding: 10px;
     }
 
     &__listItem {
-        
         margin-right: 20px;
     }
 
@@ -245,6 +271,6 @@ footer {
 }
 
 .copyright {
-    font-size: .75rem;
+    font-size: .625rem;
     color: $base-color;
 }
