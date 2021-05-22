@@ -207,8 +207,10 @@ main {
 footer {
     position: fixed;
     padding: 2rem;
+    width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     display: flex;
     flex-wrap:wrap;
@@ -245,6 +247,7 @@ footer {
     }
 }
 /*********footer info***************/
+
 .footer-info {
     width: 100%;
     display: flex;

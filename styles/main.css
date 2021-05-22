@@ -813,8 +813,11 @@ main {
 footer {
   position: fixed;
   padding: 2rem;
+  width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
