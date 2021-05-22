@@ -151,10 +151,16 @@ main {
 } // end site-nav
 
 .site-logo {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 40px;
+    max-height: 40px;
     flex: 1;
+
+    @media screen and (min-width: 769px) {
+        max-width: 50px;
+    max-height: 50px; 
+    }
 }
+
 
 .shop-nav {
     margin-left: auto;

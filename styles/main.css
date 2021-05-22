@@ -27,7 +27,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #707070;
+  color: #333333;
 }
 
 a:hover {
@@ -48,7 +48,7 @@ select {
   margin: 0;
   text-decoration: none;
   background: transparent;
-  color: #707070;
+  color: #333333;
   cursor: pointer;
   text-align: center;
   -webkit-transition: background 250ms ease-in-out,  -webkit-transform 150ms ease;
@@ -62,37 +62,37 @@ select {
 .btn__dark,
 .select__dark {
   padding: 10px 20px;
-  border: 1px solid #707070;
+  border: 1px solid #333333;
   border-radius: 2px;
-  background-color: #707070;
+  background-color: #333333;
   color: white;
 }
 
 .btn__dark:hover,
 .select__dark:hover {
   background: white;
-  border-color: #707070;
-  color: #707070;
+  border-color: #333333;
+  color: #333333;
 }
 
 .btn__dark:focus,
 .select__dark:focus {
-  color: #707070;
+  color: #333333;
 }
 
 .btn__light,
 .select__light {
   padding: 5px 10px;
-  border: 1px solid #707070;
+  border: 1px solid #333333;
   border-radius: 2px;
   background-color: white;
-  color: #707070;
+  color: #333333;
 }
 
 .btn__light:hover,
 .select__light:hover {
-  background: #707070;
-  border-color: #707070;
+  background: #333333;
+  border-color: #333333;
   color: white;
 }
 
@@ -421,7 +421,7 @@ button:active {
 
 .news-letter .form__input {
   text-align: left;
-  border: 2px solid #707070;
+  border: 2px solid #333333;
   border-radius: 5px 0 0 5px;
   padding: 10px;
   width: 70%;
@@ -435,9 +435,9 @@ button:active {
 
 .news-letter .form__send {
   padding: 10px;
-  border: 2px solid #707070;
+  border: 2px solid #333333;
   border-radius: 0 5px 5px 0;
-  background-color: #707070;
+  background-color: #333333;
   color: white;
   margin-left: -5px;
   -webkit-transition: background-color .5s ease-in-out, color .5s ease-in-out;
@@ -446,7 +446,7 @@ button:active {
 
 .news-letter .form__send:hover {
   background-color: white;
-  color: #707070;
+  color: #333333;
 }
 
 /***************  call to action card  ********************/
@@ -495,8 +495,8 @@ button:active {
 }
 
 .cta__btn:hover {
-  background-color: #707070;
-  border: 2px solid #707070;
+  background-color: #333333;
+  border: 2px solid #333333;
   color: #252525;
 }
 
@@ -762,11 +762,18 @@ main {
 }
 
 .site-logo {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 40px;
+  max-height: 40px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media screen and (min-width: 769px) {
+  .site-logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
 }
 
 .shop-nav {
@@ -1004,5 +1011,5 @@ footer {
 
 .copyright {
   font-size: .625rem;
-  color: #707070;
+  color: #333333;
 }
