@@ -23,8 +23,36 @@
     <main>
         <div class="main-content">
 
-        <div class="" id="product">Här ska det vara en produkt</div>
+            <article class="product">  
+                <div  class="product__imgframe"><img id="productImage" src="http://127.0.0.1:5500/images/products/downhill/stumpjumper-pro-gloss-cast-blue-metallic.jpg" alt=""></div>
+                
+                <section class="product-info">
+                    <div class="containerL">
+                        <h1 id="productID" class="product__title">Stumpjumper Pro</h1>
+                        <h2 id="productPrice" class="card__price">88 999 kr</h2>
+                    </div>
+                    <div class="containerR">
+                        <form action="" class="product-add-to-cart">
+                            <label for="size">Storlek</label>
+                            <select id="size" class="select select__light">
+                                <option value="s">S 157-170 cm</option>
+                                <option value="m">M 170-183 cm</option>
+                                <option value="l">L 180-196 cm</option>
+                            </select>
+                            <div class="add-to-cart">
+                                <input class="number__light" type="number" name="amount" id="amount" value="1">
+                                <input class="btn__dark"type="submit" value="Lägg i varukorg">
+                            </div>
+                        </form>
+                        
+                    </div>
+                </section>
+                <p id="productDesc" class="product__desc">Top that off with SRAM’s XO1 Eagle 12-speed drivetrain and FOX Factory suspension and the “bang for the buck” factor is almost as rad as the bike itself.
+                    THE TRAIL BENCHMARK — When we set out to design the all-new Stumpjumper, we pursued some hefty goals. It had to excel on any kind of trail, for every style of rider. To achieve that, we went after serious weight reduction without sacrificing durability, a stiff, responsive chassis that still rides light and lively, geometry that improves everyone’s riding, and the best suspension kinematics we know how to design. Turns out, you can have your cake and eat it too with the new Stumpjumper.</p>
+            
+             </article>
         <script>renderProductPage()</script>
+        <!-- Renders product dynamicaly from products.js via script.js -->
 
     </div>
 </main>

@@ -62,7 +62,7 @@ select {
 .btn__dark,
 .select__dark {
   padding: 10px 20px;
-  border: 2px solid #707070;
+  border: 1px solid #707070;
   border-radius: 2px;
   background-color: #707070;
   color: white;
@@ -83,7 +83,7 @@ select {
 .btn__light,
 .select__light {
   padding: 5px 10px;
-  border: 2px solid #707070;
+  border: 1px solid #707070;
   border-radius: 2px;
   background-color: white;
   color: #707070;
@@ -119,6 +119,12 @@ button:active {
           transform: scale(0.99);
 }
 
+/*********** Custom Inputs ********************/
+.number__light {
+  background: white;
+  padding: 5px;
+}
+
 /*****************************************/
 .btn-close {
   font-size: 1.5rem;
@@ -130,7 +136,6 @@ button:active {
   }
 }
 
-/******************** Graphic arrows ***************/
 /***************  EXPANDABLE ELEMENTS ********************/
 .exp-B__cont {
   visibility: hidden;
@@ -329,14 +334,14 @@ button:active {
   overflow: hidden;
 }
 
-.card .product {
+.card__product {
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 @media screen and (min-width: 425px) {
-  .card .product {
+  .card__product {
     height: 150px;
   }
 }
@@ -786,6 +791,7 @@ main {
   margin-right: 1rem;
 }
 
+/***************  Shop ********************/
 /***************  PRODUKT WRAPPER ********************/
 .products-head {
   text-align: center;
@@ -803,9 +809,84 @@ main {
   font-weight: 400;
 }
 
-/***************  Shop ********************/
+/***************  Product ********************/
 .shop-wrapper {
   position: relative;
+}
+
+.product {
+  padding-bottom: 80px;
+}
+
+.product__imgframe {
+  width: 100%;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product__title {
+  line-height: 2.5rem;
+}
+
+.product__desc {
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.3rem;
+  max-width: 600px;
+}
+
+.product__price {
+  line-height: 2.5rem;
+}
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3rem;
+  background: lightgray;
+}
+
+@media screen and (min-width: 425px) {
+  .product-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.product-info .containerL {
+  padding: 20px;
+}
+
+.product-info .containerR {
+  padding: 20px;
+}
+
+.product-info .product-add-to-cart label {
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+}
+
+.product-info .product-add-to-cart .add-to-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+
+.product-info .product-add-to-cart .add-to-cart .number__light {
+  width: 50px;
 }
 
 /***************  FOOTER ********************/

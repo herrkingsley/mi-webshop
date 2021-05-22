@@ -175,7 +175,7 @@ main {
     }
 
 }
-
+/***************  Shop ********************/
 /***************  PRODUKT WRAPPER ********************/
 
 .products-head {
@@ -196,10 +196,87 @@ main {
 
     
 }
-/***************  Shop ********************/
+
+
+
+/***************  Product ********************/
 .shop-wrapper {
     position: relative;
 }
+
+.product {
+    padding-bottom: 80px;
+
+    &__imgframe {
+        width: 100%;
+    }
+    & img {
+    width: 100%;
+    }
+
+    &__title {
+        line-height: 2.5rem;;
+    }
+
+    &__desc {
+        margin: 0 auto;
+        font-weight: 300;
+        line-height: 1.3rem;
+        max-width: 600px;
+    }
+
+    &__price {
+        line-height: 2.5rem;
+        
+    }
+
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    background: lightgray;
+
+    @media screen and (min-width: 425px) {
+         flex-direction: row;
+         justify-content: space-around;
+    }
+
+    & .containerL {
+        padding: 20px;
+    }
+
+    & .containerR {
+        padding: 20px;
+        
+    }
+
+    & .product-add-to-cart {
+        
+        & label {
+            display: block;
+            font-family: $main-font;
+            font-weight: 200;
+        }
+
+        & .add-to-cart {
+            display: flex;
+            padding: 20px 0;
+
+            & .number__light {
+                width: 50px; 
+            }
+        }
+        
+        
+    }
+    
+
+}
+
+
+
 
 /***************  FOOTER ********************/
 
