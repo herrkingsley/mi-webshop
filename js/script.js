@@ -114,3 +114,12 @@ if(document.querySelectorAll('#products-container').length > 0) {
      });
    });
 
+
+     //--------------- Add to cart function  ------------------
+
+     function addToCart() {
+       document.getElementById('basket').classList.toggle('visable');
+       document.getElementById('buy-alert').classList.toggle('visable');
+       document.getElementById('buy').classList.toggle('bought');
+     }
+     

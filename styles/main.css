@@ -203,6 +203,11 @@ button:active {
   margin-bottom: 1rem;
 }
 
+/***************  toggle visable ********************/
+.visable {
+  display: block;
+}
+
 /***************  HERO SLIDESHOW ********************/
 .hero-container {
   position: relative;
@@ -525,6 +530,28 @@ button:active {
   text-align: right;
 }
 
+/***************  add to cart alert  ********************/
+.added-to-cart {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  width: 300px;
+  border-radius: 5px;
+  background: #a7fda7;
+  padding: 40px;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+  z-index: 120;
+}
+
+.added-to-cart.visable {
+  display: block;
+}
+
 /***************  filter card  ********************/
 .filter-card {
   display: -webkit-box;
@@ -802,6 +829,27 @@ main {
   margin-right: 1rem;
 }
 
+.shop-nav__link {
+  position: relative;
+}
+
+.shop-nav .basket {
+  position: absolute;
+  display: none;
+  top: -12px;
+  left: 5px;
+  background: tomato;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-size: .6rem;
+  font-weight: 900;
+  z-index: -2;
+}
+
+.shop-nav .basket.visable {
+  display: block;
+}
+
 /***************  Shop ********************/
 /***************  PRODUKT WRAPPER ********************/
 .products-head {
@@ -898,6 +946,10 @@ main {
 
 .product-info .product-add-to-cart .add-to-cart .number__light {
   width: 50px;
+}
+
+.product-info .product-add-to-cart .add-to-cart .bought {
+  background: #a7fda7;
 }
 
 /***************  FOOTER ********************/

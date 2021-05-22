@@ -188,6 +188,12 @@ button:active {
     margin-bottom: 1rem;
 }
 
+/***************  toggle visable ********************/
+
+.visable {
+    display: block;
+}
+
 
 /***************  HERO SLIDESHOW ********************/
 
@@ -478,20 +484,29 @@ button:active {
     text-align: right;
 }
 
+/***************  add to cart alert  ********************/
+
+.added-to-cart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+    background: $good-color;
+    padding: 40px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+    z-index: 120;
+
+    &.visable {
+        display: block;
+    }
+
+}
+
 /***************  filter card  ********************/
-
-// .filter-float {
-//     display: none;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     background-color: white;
-//     box-shadow: -1px 4px 3px 0px rgba($color: #000000, $alpha: .3);
-//     min-height: 50vh;
-//     padding: 20px;
-//     z-index: 99;
-// }
-
 
 .filter-card {
     display: flex;

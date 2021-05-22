@@ -37,7 +37,7 @@
                         <h2 id="productPrice" class="card__price">88 999 kr</h2>
                     </div>
                     <div class="containerR">
-                        <form action="" class="product-add-to-cart">
+                        <section class="product-add-to-cart">
                             <label for="size">Storlek</label>
                             <select id="size" class="select select__light">
                                 <option value="s">S 157-170 cm</option>
@@ -46,9 +46,13 @@
                             </select>
                             <div class="add-to-cart">
                                 <input class="number__light" type="number" name="amount" id="amount" value="1">
-                                <input class="btn__dark"type="submit" value="Lägg i varukorg">
+                                <input id="buy" class="btn__dark" type="submit" value="Lägg i varukorg" onclick="addToCart()">
                             </div>
-                        </form>
+                        </section>
+                        <article id="buy-alert" class="added-to-cart" onclick="addToCart()">
+                            <h1>Hurra!</h1>
+                            <p>Varan har lagts i varukorgen!</p>
+                        </article>
                         
                     </div>
                 </section>

@@ -177,7 +177,29 @@ main {
     }
 
     &__listItem {
+        
         margin-right: 1rem;
+    }
+    &__link {
+        position: relative;
+    }
+
+    & .basket {
+        position: absolute;
+        display: none;
+        top: -12px;
+        left: 5px;
+        background: tomato;
+        padding: 5px 8px;
+        border-radius: 50%;
+        font-size: .6rem;
+        font-weight: 900;
+
+        z-index: -2;
+
+        &.visable {
+            display: block;
+        }
     }
 
 }
@@ -272,6 +294,10 @@ main {
 
             & .number__light {
                 width: 50px; 
+            }
+
+            & .bought {
+                background: $good-color;
             }
         }
         
