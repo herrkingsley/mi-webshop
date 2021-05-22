@@ -12,15 +12,6 @@ if(document.querySelectorAll('.hero').length > 0) {
 showSlides();
 }
 
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
 
 function showSlides() {
     
@@ -33,7 +24,7 @@ function showSlides() {
     slideIndex++; 
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block"; // Shows the current slide
-    setTimeout(showSlides, 2000); // Change slide every X seconds
+    setTimeout(showSlides, 7000); // Change slide every X seconds
   }
 
 

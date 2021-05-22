@@ -234,8 +234,14 @@ button:active {
         font-weight: 400;
         padding: 12px 20px 10px;
         text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
 
         border: 1px solid rgb(37, 37, 37);
+
+        &:hover {
+            background: white;
+        }
 
     }
 

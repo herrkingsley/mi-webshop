@@ -251,7 +251,13 @@ button:active {
   font-weight: 400;
   padding: 12px 20px 10px;
   text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
   border: 1px solid #252525;
+}
+
+.hero-slide__link:hover {
+  background: white;
 }
 
 .fade-slide {
