@@ -274,15 +274,16 @@ button:active {
 .cards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding-top: 50px;
     padding-bottom: 40px;
 
 }
 
 .card {
-    width: 45%;  
-    height: auto; 
+    width: 50%;  
+    height: auto;
+    padding: 1rem;
     margin-bottom: 2rem;
 
     @media screen and (min-width: 769px) {
@@ -290,7 +291,7 @@ button:active {
     }
 
     @media screen and (min-width: 1024px) {
-        max-width: 23%;
+        max-width: 25%;
     }
 
     // Container som håller bilden, hjälper till med zoom funktionen

@@ -54,6 +54,42 @@ function renderCards(array) {
     return renderProducts;
 }
 
+   //--------------- Render NEW products  ------------------
+  
+
+function renderNewProducts() {
+
+  // Chooses the first item in every category
+  const newProducts = [products.landsvag[0], products.vintage[0],products.downhill[0],products.childbike[0]];
+
+  document.getElementById('products-container').innerHTML = renderCards(newProducts)
+
+
+}
+
+if(document.querySelectorAll('#products-container').length > 0) {
+
+  renderNewProducts();
+  }
+
+  //--------------- Render catagory page  ------------------
+
+
+  function renderCategoryProducts() {
+
+    // Chooses the first item in every category
+    const category = localStorage.getItem("category");
+  
+    document.getElementById('category-container').innerHTML = renderCards(products[category])
+  
+  
+  }
+  
+  if(document.querySelectorAll('#category-container').length > 0) {
+  
+    renderCategoryProducts();
+    }
+
 
   //--------------- Dynamic product page  ------------------
 
@@ -73,25 +109,6 @@ function renderCards(array) {
 
     
   }
-
-   //--------------- Render NEW products  ------------------
-  
-
-function renderNewProducts() {
-
-  // Chooses the first item in every category
-  const newProducts = [products.landsvag[0], products.vintage[0],products.downhill[0],products.childbike[0]];
-
-  document.getElementById('products-container').innerHTML = renderCards(newProducts)
-
-
-}
-
-if(document.querySelectorAll('#products-container').length > 0) {
-
-  renderNewProducts();
-  }
-
 
   //--------------- Filtercards  ------------------
 
